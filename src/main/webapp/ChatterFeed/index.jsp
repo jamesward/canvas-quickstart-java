@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
         <link rel="stylesheet" type="text/css" href="/ChatterFeed/chatterfeed${ua.device.mobile ? '-mobile':''}.css"/>
 
-        <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+        <script type="text/javascript" src="/webjars/SalesforceCanvasJavascriptSDK/38.0/js/canvas-all.js"></script>
         <script type="text/javascript" src="/scripts/json2.js"></script>
         <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
 

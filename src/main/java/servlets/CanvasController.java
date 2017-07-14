@@ -44,18 +44,18 @@ import canvas.SignedRequest;
 public class CanvasController extends AbstractServlet {
 
 	public static final String SIGNED_REQUEST_PARAM = "signed_request";
-	
+
 	/**
 	 * This request parameter is passed when SIGNED_REQUEST is configured
 	 * for the app, but requires some additional information.  This can be
 	 * determined on the value on this parameter.
 	 */
 	public static final String SFDC_CANVAS_AUTH = "_sfdc_canvas_auth";
-	
+
 	/**
 	 * This status indicates that the user must approve the app before
 	 * the signed request can be delivered to the app.
-	 * 
+	 *
 	 * @see #SFDC_CANVAS_AUTH
 	 */
 	public static final String AUTH_STATUS_USER_APPROVAL_REQUIRED = "user_approval_required";
@@ -93,14 +93,18 @@ public class CanvasController extends AbstractServlet {
 
 		CanvasRequest cr = SignedRequest.verifyAndDecode(srString,
 		        System.getenv("CANVAS_CONSUMER_SECRET"));
+
+		String crjson = SignedRequest.verifyAndDecodeAsJson(srString,
+				System.getenv("CANVAS_CONSUMER_SECRET"));
+
 		request.setAttribute("canvasRequest", cr);
-		request.setAttribute("canvasRequestJson", SignedRequest.toString(cr));
+		request.setAttribute("canvasRequestJson", crjson);
 
 		String resource = String.format("/%s/index.jsp", cr.getContext()
-		        .getEnvironmentContext().getDisplayLocation());
+		        .getEnvironmentContext().getLocationUrl());
 		forward(resource, request, response);
 	}
-	
+
 	@Override
 	protected void forward(String resource, HttpServletRequest request,
 	        HttpServletResponse response) throws IOException, ServletException {

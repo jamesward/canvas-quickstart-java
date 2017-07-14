@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <html>
     <head>
         <title>Force.com Canvas Java Quick Start</title>
-        <link rel="stylesheet" type="text/css" href="/sdk/css/canvas.css" />
+        <link rel="stylesheet" type="text/css" href="/webjars/SalesforceCanvasJavascriptSDK/38.0/css/canvas.css" />
     </head>
     <body>
       <div id="page">

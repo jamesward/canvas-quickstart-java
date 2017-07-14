@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <title>Force.com Canvas Java Quick Start</title>
         <link rel="stylesheet" type="text/css" href="/Publisher/publisher${ua.device.mobile ? '-mobile':'-desktop'}.css"/>
         <script type="text/javascript" src="/scripts/json2.js"></script>
-        <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+        <script type="text/javascript" src="/webjars/SalesforceCanvasJavascriptSDK/38.0/js/canvas-all.js"></script>
         <script type="text/javascript" src="/Publisher/publisher.js"></script>
         <script>
             if (self === top) { alert("This canvas app must be included within an iframe"); }

@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" />
 
     <script type="text/javascript" src="/scripts/json2.js"></script>
-    <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+    <script type="text/javascript" src="/webjars/SalesforceCanvasJavascriptSDK/38.0/js/canvas-all.js"></script>
     <script type="text/javascript" src="/default/tabs.js"></script>
     <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
 
@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
         	var options = newDimensions ? newDimensions : {};
             console.log("resize.");
             Sfdc.canvas.client.resize(sr.client,  {
-            	width : options.width?options.width:"600px", 
+            	width : options.width?options.width:"600px",
       			height : options.height?options.height:"600px"
 			});
         }

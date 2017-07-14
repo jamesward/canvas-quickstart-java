@@ -26,21 +26,29 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class CallbackController 
+public class CallbackController
 extends AbstractServlet {
-	private static final String CALLBACK_RESOURCE = "/sdk/callback.html";
+    private static final String CALLBACK_RESOURCE = "/webjars/SalesforceCanvasJavascriptSDK/38.0/callback.html";
 
     private static final long serialVersionUID = -7540328539834469665L;
 
-	@Override
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-		forward(CALLBACK_RESOURCE,request,response);
+        InputStream is = this.getClass().getResourceAsStream("/META-INF/resources" + CALLBACK_RESOURCE);
+        OutputStream os = response.getOutputStream();
+        byte[] buf = new byte[1000];
+        for (int nChunk = is.read(buf); nChunk!=-1; nChunk = is.read(buf))
+        {
+            os.write(buf, 0, nChunk);
+        }
     }
 
 }

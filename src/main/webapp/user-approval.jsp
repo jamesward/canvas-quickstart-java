@@ -30,27 +30,27 @@ POSSIBILITY OF SUCH DAMAGE.
 <html>
     <head>
         <title>Force.com Canvas Java Quick Start</title>
-        <link rel="stylesheet" type="text/css" href="/sdk/css/canvas.css" />
-        <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+        <link rel="stylesheet" type="text/css" href="/webjars/SalesforceCanvasJavascriptSDK/38.0/css/canvas.css" />
+        <script type="text/javascript" src="/webjars/SalesforceCanvasJavascriptSDK/38.0/js/canvas-all.js"></script>
         <script type="text/javascript">
         function clickHandler(e) {
             var loginUrl,
             	consumerKey = "${consumerKey}";
             if (!Sfdc.canvas.oauth.loggedin()) {
-            	// First, we retrieve the login url that is passed to the app in 
+            	// First, we retrieve the login url that is passed to the app in
             	// the query string of the app.
                 loginUrl = Sfdc.canvas.oauth.loginUrl();
             	if (Sfdc.canvas.isNil(loginUrl)){
             		alert("Unable to retrieve login url passed by the canvas framework.");
             		return false;
             	}
-            	
+
             	// We need the consumer key to perform the oauth flow.
             	if (Sfdc.canvas.isNil(consumerKey)){
             		alert("Consumer key not specified in request.  Please provide the consumer key before trying to approve this application.");
             		return false;
             	}
-            	
+
                 // This uri is the outer parent window.
                 Sfdc.canvas.oauth.login(
                         {uri : loginUrl,
@@ -84,7 +84,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <div id="canvas-content">
               <h2>
                   <br/>
-                  It appears that you have not yet approved this application for use within 
+                  It appears that you have not yet approved this application for use within
                   Salesforce.com.
                   <p/>
                   If you are seeing this message, it is because you have either not yet approved this

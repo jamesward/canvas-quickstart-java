@@ -42,9 +42,9 @@ POSSIBILITY OF SUCH DAMAGE.
     <head>
         <title>Force.com Canvas Java Quick Start</title>
 
-        <link rel="stylesheet" type="text/css" href="/sdk/css/canvas.css" />
+        <link rel="stylesheet" type="text/css" href="/webjars/SalesforceCanvasJavascriptSDK/38.0//css/canvas.css" />
 
-        <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+        <script type="text/javascript" src="/webjars/SalesforceCanvasJavascriptSDK/38.0/js/canvas-all.js"></script>
         <script type="text/javascript" src="/scripts/json2.js"></script>
         <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
 
